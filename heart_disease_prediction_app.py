@@ -4,7 +4,6 @@ import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestClassifier 
 
-# Set page config
 st.set_page_config(page_title="Heart Disease Prediction", page_icon="❤️", layout="centered")
 
 
@@ -12,7 +11,7 @@ model_path = "model.pkl"
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
 
-# Sidebar info
+
 st.sidebar.markdown("##  About This App")
 st.sidebar.write("""
 This app predicts the **risk of heart disease** based on user input using a trained Random Forest Classifier.
@@ -25,7 +24,6 @@ This app predicts the **risk of heart disease** based on user input using a trai
 st.sidebar.markdown("---")
 st.sidebar.info("Made with by Devaansh")
 
-# App title
 st.markdown("<h1 style='text-align: center; color: white;'>💓 Heart Disease Predictor</h1>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color: white;'>Check your heart health in seconds</h5>", unsafe_allow_html=True)
 

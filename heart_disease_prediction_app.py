@@ -1,8 +1,8 @@
-import streamlit as st
+import streamlit as st 
 import pandas as pd
-import numpy as np
+import numpy as np 
 import pickle
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier 
 
 # Add custom CSS to set the background image from the URL
 st.markdown("""

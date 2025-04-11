@@ -8,7 +8,6 @@ from sklearn.ensemble import RandomForestClassifier
 st.set_page_config(page_title="Heart Disease Prediction", page_icon="❤️", layout="centered")
 
 
-# Load the trained model
 model_path = "model.pkl"
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
@@ -24,17 +23,16 @@ This app predicts the **risk of heart disease** based on user input using a trai
 """)
 
 st.sidebar.markdown("---")
-st.sidebar.info("Made with by Devansh")
+st.sidebar.info("Made with by Devaansh")
 
 # App title
 st.markdown("<h1 style='text-align: center; color: white;'>💓 Heart Disease Predictor</h1>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color: white;'>Check your heart health in seconds</h5>", unsafe_allow_html=True)
 
-# Input panel container
 with st.container():
     st.markdown("### 📝 Enter Patient Information")
 
-    # Collecting user input
+    
     age = st.number_input("Age", min_value=1, max_value=120, value=50)
     sex = st.selectbox("Sex", options=[0, 1], format_func=lambda x: "Male" if x == 1 else "Female")
     cp = st.selectbox("Chest Pain Type", options=[0, 1, 2, 3], format_func=lambda x: ["Typical Angina", "Atypical Angina", "Non-Anginal Pain", "Asymptomatic"][x])
@@ -49,7 +47,7 @@ with st.container():
     ca = st.selectbox("Number of Major Vessels Colored", options=[0, 1, 2, 3])
     thal = st.selectbox("Thalassemia", options=[1, 2, 3], format_func=lambda x: {1: "Normal", 2: "Fixed Defect", 3: "Reversible Defect"}[x])
 
-    # Prepare input for prediction
+
     input_data = {
         'age': age,
         'sex': sex,
@@ -73,7 +71,6 @@ def predict_heart_disease(data):
     diagnosis = "💔 Heart Disease" if probability > 0.5 else "💚 No Heart Disease"
     return diagnosis, probability
 
-# Button
 if st.button("🧾 Predict Result"):
     result, prob = predict_heart_disease(input_data)
     
@@ -83,10 +80,9 @@ if st.button("🧾 Predict Result"):
     st.info(f"**Prediction Confidence:** {prob:.2%}")
     st.markdown("---")
 
-# Footer
 st.markdown("""
     <hr>
     <div style="text-align: center; color: white;">
-        © 2025 Devansh | Built using Streamlit
+        © 2025 Devaansh | Built using Streamlit
     </div>
 """, unsafe_allow_html=True)

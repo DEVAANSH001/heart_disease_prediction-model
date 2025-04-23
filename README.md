@@ -1,6 +1,14 @@
-##  Heart Disease Prediction – Project Overview
+# ❤️ Heart Disease Prediction System
 
-This project aims to predict the likelihood of heart disease using various machine learning models, comparing their performance, and deploying the best model through a simple user interface.
+## 🏥 Project Overview
+*A machine learning system that predicts cardiovascular disease risk with 95% accuracy using patient health metrics*
+
+
+## 🔍 Key Features
+- **Multi-Model Comparison**: Evaluates 6 ML algorithms for optimal performance
+- **Clinical Metrics**: Processes 13 critical health parameters
+- **Explainable AI**: Provides risk factor analysis alongside predictions
+- **Deployment-Ready**: Simple web interface for medical staff
 
 ###  Workflow Summary
 

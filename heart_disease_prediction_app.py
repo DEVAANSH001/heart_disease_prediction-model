@@ -22,7 +22,7 @@ This app predicts the **risk of heart disease** based on user input using a trai
 """)
 
 st.sidebar.markdown("---")
-st.sidebar.info("Made with by Devaansh")
+st.sidebar.info("Made by Devaansh")
 
 st.markdown("<h1 style='text-align: center; color: white;'>💓 Heart Disease Predictor</h1>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: center; color: white;'>Check your heart health in seconds</h5>", unsafe_allow_html=True)
